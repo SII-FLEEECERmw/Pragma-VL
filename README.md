@@ -10,6 +10,10 @@ This is the official implementation of **PRAGMA-VL: Towards a Pragmatic Arbitrat
 
 **Pragma-VL** is an end-to-end alignment pipeline that enables Multimodal Large Language Models (MLLMs) to pragmatically arbitrate between safety and helpfulness, effectively overcoming the challenges of over-refusal and risk-blindness in current systems.
 
+🌐 Project Page: https://sii-fleeecermw.github.io/PragmaVL-iclr26/
+📊 Dataset: https://huggingface.co/datasets/SII-fleeeecer/PragmaSafe-Beavertails
+📄 Paper: https://arxiv.org/abs/2603.13292
+
 ## Quick Start
 
 ### Installation
@@ -152,13 +156,6 @@ LORA_ALPHA="256"
 
 #### 4. Launch Training
 ```bash
-# Single node training
-bash script/train_reward.sh
-
-# Multi-node training
-MASTER_ADDR="192.168.1.100" \
-MASTER_PORT="12345" \
-NPROC_PER_NODE="4" \
 bash script/train_reward.sh
 ```
 
@@ -248,7 +245,7 @@ result = response.json()
 We provide **two training modes** to accommodate different GPU memory constraints:
 
 #### Mode 1: Reward Server Mode (Memory Efficient)
-**Use case**: When GPU memory is limited, run reward model on separate machines/CPUs
+**Use case**: When GPU memory is limited, run reward model on separate machines.
 
 **How it works**: 
 - Reward model runs as an independent service
@@ -274,7 +271,7 @@ custom_reward_function.path=./reward/serve_online/reward_client.py
 ```
 
 #### Mode 2: Integrated Worker Mode (High Performance)
-**Use case**: When sufficient GPU memory is available (recommended for single-machine training)
+**Use case**: When sufficient GPU memory is available.
 
 **How it works**:
 - Reward model runs as Ray worker within VERL
@@ -293,17 +290,6 @@ reward_model.enable=True
 reward_model.model.path=/path/to/your/reward_model
 reward_model.micro_batch_size_per_gpu=8
 ```
-
-#### Launch Training
-```bash
-# Choose your preferred mode:
-# For memory-efficient distributed training
-bash script/train_verl_qwen_2_5_7b_grpo_reward_server.sh
-
-# For high-performance single-machine training
-bash script/train_verl_qwen_2_5_7b_grpo_reward_worker.sh
-```
-
 
 ## Citation
 
