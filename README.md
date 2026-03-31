@@ -11,7 +11,9 @@ This is the official implementation of **PRAGMA-VL: Towards a Pragmatic Arbitrat
 **Pragma-VL** is an end-to-end alignment pipeline that enables Multimodal Large Language Models (MLLMs) to pragmatically arbitrate between safety and helpfulness, effectively overcoming the challenges of over-refusal and risk-blindness in current systems.
 
 🌐 Project Page: https://sii-fleeecermw.github.io/PragmaVL-iclr26/
+
 📊 Dataset: https://huggingface.co/datasets/SII-fleeeecer/PragmaSafe-Beavertails
+
 📄 Paper: https://arxiv.org/abs/2603.13292
 
 ## Quick Start
