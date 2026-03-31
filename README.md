@@ -1,7 +1,7 @@
 # PRAGMA-VL: Towards a Pragmatic Arbitration of Safety and Helpfulness in MLLMs
 
 <p align="center">
-  <img src="img/motivation.png" alt="PRAGMA-VL Motivation" width="800"/>
+  <img src="img/posterhead.png" alt="PRAGMA-VL Motivation" width="800"/>
 </p>
 
 ## Project Overview
